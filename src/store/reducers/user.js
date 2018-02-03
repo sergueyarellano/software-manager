@@ -1,11 +1,12 @@
 const initialState = {
+  name: 'Admin'
 }
 
-const root = (state = initialState, action) => {
+const user = (state = initialState, action) => {
   switch (action.type) {
     default:
       return state
   }
 }
 
-export default root
+export default user

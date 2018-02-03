@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import mapStateToProps from '../store/connect/mapState/sideBarOption'
 import mapDispatchToProps from '../store/connect/mapDispatch/SideBarOption'
@@ -14,10 +15,18 @@ export default React => () => {
   return (
     <SideBarWrapper_>
       <SideBarSettings />
-      <SideBarOption icon='fas fa-bolt fa-2x'>Ventas</SideBarOption>
-      <SideBarOption icon='fas fa-cart-plus fa-2x'>Compras</SideBarOption>
-      <SideBarOption icon='fas fa-cubes fa-2x'>Almacén</SideBarOption>
-      <SideBarOption icon='fas fa-address-book fa-2x'>Clientes</SideBarOption>
+      <Link to='/sales' className='sidebar__link'>
+        <SideBarOption icon='fas fa-bolt fa-2x'>Ventas</SideBarOption>
+      </Link>
+      <Link to='/purchases' className='sidebar__link'>
+        <SideBarOption icon='fas fa-cart-plus fa-2x'>Compras</SideBarOption>
+      </Link>
+      <Link to='/store' className='sidebar__link'>
+        <SideBarOption icon='fas fa-cubes fa-2x'>Almacén</SideBarOption>
+      </Link>
+      <Link to='/sales/clients' className='sidebar__link'>
+        <SideBarOption icon='fas fa-address-book fa-2x'>Clientes</SideBarOption>
+      </Link>
       <SideBarOption />
     </SideBarWrapper_>
   )

@@ -1,3 +1,4 @@
+import { BrowserRouter as Router } from 'react-router-dom'
 import styled from 'styled-components'
 import createWrapper from './Wrapper_'
 import createSideBar from './containers/SideBar'
@@ -9,9 +10,11 @@ export default React => () => {
   const Main = createMain(React)
 
   return (
-    <Wrapper_>
-      <SideBar />
-      <Main />
-    </Wrapper_>
+    <Router>
+      <Wrapper_>
+        <SideBar />
+        <Main />
+      </Wrapper_>
+    </Router>
   )
 }

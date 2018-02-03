@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux'
-import root from './root'
+import user from './user'
 import activeOptionFilter from './activeOptionFilter'
 
 const appReducer = combineReducers({
-  root,
+  user,
   activeOptionFilter
 })
 

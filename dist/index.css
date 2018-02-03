@@ -44,6 +44,12 @@ body {
   margin: 0px;
 }
 
+.sidebar__link {
+  display: grid;
+  color: white;
+  text-decoration: none;
+}
+
 h1,
 h2,
 h3,
