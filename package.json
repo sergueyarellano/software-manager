@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --progress --colors --config ./webpack.config.js"
+    "start": "webpack-dev-server --progress --colors --open --config ./webpack.config.js"
   },
   "keywords": [],
   "author": "Serguey Arellano <sarellano85@gmail.com>",
@@ -31,6 +31,8 @@
   "dependencies": {
     "react": "16.2.0",
     "react-dom": "16.2.0",
-    "redux": "3.7.2"
+    "react-redux": "5.0.6",
+    "redux": "3.7.2",
+    "styled-components": "3.1.5"
   }
 }

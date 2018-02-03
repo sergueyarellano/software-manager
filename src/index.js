@@ -1,42 +1,16 @@
 import React from 'react'
 import { render } from 'react-dom'
-import {createStore} from 'redux'
+import { Provider } from 'react-redux'
+import store from './store'
+import createApp from './App'
 
-const counter = (state = 0, action) => {
-  switch (action.type) {
-    case 'INCREMENT':
-      return state + 1
-    case 'DECREMENT':
-      return state - 1
-    default:
-      return state
-  }
-}
+const App = createApp(React)
 
-const store = createStore(counter)
-
-const Counter = ({
-  value,
-  onIncrement,
-  onDecrement
-}) => (
-  <div>
-    <h1>{value}</h1>
-    <button onClick={onIncrement}>+</button>
-    <button onClick={onDecrement}>-</button>
-  </div>
+render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('app')
 )
-const renderU = () => {
-  render(
-    <Counter
-      value={store.getState()}
-      onIncrement={() => store.dispatch({type: 'INCREMENT'})}
-      onDecrement={() => store.dispatch({type: 'DECREMENT'})}
-    />,
-    document.getElementById('root')
-  )
-}
 
-store.subscribe(renderU)
-renderU()
 module.hot.accept()
