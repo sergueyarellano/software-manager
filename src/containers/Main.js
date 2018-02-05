@@ -17,11 +17,18 @@ export default React => () => {
       <Route exact path='/' render={() => (
         <MainWrapper_>
           <Header />
-          <Content />
         </MainWrapper_>
         )} />
-      <Route exact path='/sales' render={() => (<div>Sales</div>)} />
-      <Route exact path='/sales/clients' render={() => (<div>Clients</div>)} />
+      <Route exact path='/:subhome' render={({match}) => (
+        <MainWrapper_>
+          <Header type={[match.params.subhome]} /><Content type={match.params.subhome} />
+        </MainWrapper_>
+      )} />
+      <Route exact path='/:subhome/:item' render={({match}) => (
+        <MainWrapper_>
+          <Header type={[match.params.subhome, match.params.item]} />
+        </MainWrapper_>
+      )} />
     </div>
   )
 }

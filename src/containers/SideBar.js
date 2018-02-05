@@ -15,19 +15,15 @@ export default React => () => {
   return (
     <SideBarWrapper_>
       <SideBarSettings />
-      <Link to='/sales' className='sidebar__link'>
+      <Link to='/ventas' className='sidebar__link'>
         <SideBarOption icon='fas fa-bolt fa-2x'>Ventas</SideBarOption>
       </Link>
-      <Link to='/purchases' className='sidebar__link'>
+      <Link to='/compras' className='sidebar__link'>
         <SideBarOption icon='fas fa-cart-plus fa-2x'>Compras</SideBarOption>
       </Link>
-      <Link to='/store' className='sidebar__link'>
+      <Link to='/almacen' className='sidebar__link'>
         <SideBarOption icon='fas fa-cubes fa-2x'>Almacén</SideBarOption>
       </Link>
-      <Link to='/sales/clients' className='sidebar__link'>
-        <SideBarOption icon='fas fa-address-book fa-2x'>Clientes</SideBarOption>
-      </Link>
-      <SideBarOption />
     </SideBarWrapper_>
   )
 }
