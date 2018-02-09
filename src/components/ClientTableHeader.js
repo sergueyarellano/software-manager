@@ -1,15 +1,22 @@
 import styled from 'styled-components'
 import createClientTableHeader from './styled/ClientTableHeader_'
+
+const headerItems = [
+  'Código',
+  'Nombre',
+  'Domicilio',
+  'CP',
+  'Tlf',
+  'Tlf2',
+  'Email'
+]
 export default React => () => {
   const ClientTableHeader = createClientTableHeader(styled)
   return (
     <ClientTableHeader>
-      <div>hey</div>
-      <div>hey</div>
-      <div>heylkjaslkjsdlfkjlksdflksdjflkj</div>
-      <div>hey</div>
-      <div>hey</div>
-      <div>hey</div>
+      {headerItems.map(item => (
+        <h4>{item}</h4>
+      ))}
     </ClientTableHeader>
   )
 }
