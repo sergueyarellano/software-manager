@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, browserHistory } from 'react-router-dom'
 import styled from 'styled-components'
-import createWrapper from './Wrapper_'
+import createWrapper from './style'
 import createSideBar from './containers/SideBar'
 import createMain from './containers/Main'
 

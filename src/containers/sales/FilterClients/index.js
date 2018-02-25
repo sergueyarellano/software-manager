@@ -1,8 +1,8 @@
 import { connect } from 'react-redux'
 import styled from 'styled-components'
-import createFilterClients from './styled/FilterClients_'
-import createSearch from '../components/Search'
-import mapDispatchToProps from '../store/connect/mapDispatch/search'
+import createFilterClients from './style'
+import createSearch from '../../../components/Search'
+import mapDispatchToProps from './mapDispatch/search'
 
 export default React => ({type}) => {
   const FilterClients_ = createFilterClients(styled)

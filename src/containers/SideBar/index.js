@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
-import mapStateToProps from '../store/connect/mapState/sideBarOption'
-import mapDispatchToProps from '../store/connect/mapDispatch/SideBarOption'
+import mapStateToProps from './mapState/sideBarOption'
+import mapDispatchToProps from './mapDispatch/SideBarOption'
 import styled from 'styled-components'
-import createSideBarWrapper from './styled/SideBarWrapper_'
-import createSideBarOption from '../components/SideBarOption'
-import createSideBarSettings from '../components/SideBarSettings'
+import createSideBarWrapper from './style'
+import createSideBarOption from '../../components/SideBarOption'
+import createSideBarSettings from '../../components/SideBarSettings'
 
 export default React => () => {
   const SideBarWrapper_ = createSideBarWrapper(styled)

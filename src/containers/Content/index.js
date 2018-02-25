@@ -1,12 +1,12 @@
 import styled from 'styled-components'
-import createSubhomeItems from './styled/SubhomeItems_'
-import createContent from './styled/Content_'
-import createSeparator from './styled/Separator_'
+import createContent from './style'
+import createSubhomeItems from '../styled/SubhomeItems_'
+import createSeparator from '../styled/Separator_'
 import { Link } from 'react-router-dom'
 
 const types = {
   ventas: [
-    'Documentos de clientes',
+    'Clientes',
     'Tarifas de precios',
     '-',
     'Factura de cliente',

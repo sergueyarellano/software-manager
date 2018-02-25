@@ -1,4 +1,4 @@
-import { fetchClients } from '../../actions'
+import { fetchClients } from '../../../../store/actions'
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
   onChange: (pattern) => {

@@ -1,4 +1,4 @@
-import { setActiveOptionFilter } from '../../actions'
+import { setActiveOptionFilter } from '../../../store/actions'
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
   onClick: () => {
