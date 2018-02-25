@@ -27,8 +27,8 @@ export default React => ({type}) => {
 
   return (
     <Switch>
+      <Route path='/ventas/Clientes/ficha' component={Prueba} />
       <Route path='/ventas/Clientes' component={Clients} />
-      <Route path='/ventas/Clientes/:ficha' component={Prueba} />
     </Switch>
   )
 }

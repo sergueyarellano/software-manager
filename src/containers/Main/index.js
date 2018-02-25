@@ -1,4 +1,4 @@
-import { Route } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import styled from 'styled-components'
 import {connect} from 'react-redux'
 import mapStateToProps from './mapState/header'
@@ -15,7 +15,7 @@ export default React => () => {
   const ContentSales = createContentSales(React)
 
   return (
-    <div style={{display: 'grid'}}>
+    <Switch>
       <Route exact path='/' render={() => (
         <Main_>
           <Header />
@@ -27,12 +27,12 @@ export default React => () => {
           <Content type={match.params.subhome} />
         </Main_>
       )} />
-      <Route exact path='/ventas/Clientes' render={({match}) => (
+      <Route path='/ventas/Clientes' render={({match}) => (
         <Main_>
           <Header type={['ventas', '>', 'Clientes']} />
           <ContentSales />
         </Main_>
       )} />
-    </div>
+    </Switch>
   )
 }
