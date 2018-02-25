@@ -1,4 +1,4 @@
-import { BrowserRouter as Router } from 'react-router-dom'
+import { BrowserRouter as Router, browserHistory } from 'react-router-dom'
 import styled from 'styled-components'
 import createWrapper from './Wrapper_'
 import createSideBar from './containers/SideBar'
@@ -10,7 +10,7 @@ export default React => () => {
   const Main = createMain(React)
 
   return (
-    <Router>
+    <Router history={browserHistory}>
       <Wrapper_>
         <SideBar />
         <Main />

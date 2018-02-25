@@ -8,8 +8,8 @@ export default React => ({ client }) => {
       <div>{client.code}</div>
       <div>{client.name}</div>
       <div>{client.address}</div>
-      <div>{client.pc}</div>
-      <div>{client.phone}</div>
+      <div>{client.postalCode}</div>
+      <div>{client.phone1}</div>
       <div>{client.phone2}</div>
       <div>{client.email}</div>
     </ClientRow_>

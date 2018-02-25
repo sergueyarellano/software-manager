@@ -15,7 +15,7 @@ export default React => () => {
   return (
     <ClientTableHeader>
       {headerItems.map(item => (
-        <h4>{item}</h4>
+        <h4 key={item}>{item}</h4>
       ))}
     </ClientTableHeader>
   )

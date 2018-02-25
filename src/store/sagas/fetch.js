@@ -10,12 +10,15 @@ function fetchAPI (url) {
   })
 }
 
-function * fetchClient (action) {
-  console.log(action)
-  yield delay(500)
+function * fetchClient ({pattern}) {
+  yield delay(180)
   try {
-    const clients = yield call(fetchAPI, `http://localhost:3001/api?q=${action.pattern}`)
-    yield put({ type: 'CLIENT_FETCH_SUCCEEDED', clients: clients })
+    if (pattern) {
+      if (pattern === '*') pattern = '.*'
+
+      const clients = yield call(fetchAPI, `http://localhost:3001/api/clients/${pattern}`)
+      yield put({ type: 'CLIENT_FETCH_SUCCEEDED', clients: clients })
+    }
   } catch (e) {
     console.log(e)
   }
