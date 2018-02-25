@@ -14,25 +14,28 @@ export default React => () => {
   const Content = createContent(React)
   const ContentSales = createContentSales(React)
 
+  const Home = () => (
+    <Main_>
+      <Header />
+    </Main_>
+  )
+  const Clients = () => (
+    <Main_>
+      <Header type={['ventas', '>', 'Clientes']} />
+      <ContentSales />
+    </Main_>
+  )
+  const Subhome = ({match}) => (
+    <Main_>
+      <Header type={[match.params.subhome]} />
+      <Content type={match.params.subhome} />
+    </Main_>
+  )
   return (
     <Switch>
-      <Route exact path='/' render={() => (
-        <Main_>
-          <Header />
-        </Main_>
-        )} />
-      <Route exact path='/:subhome' render={({match}) => (
-        <Main_>
-          <Header type={[match.params.subhome]} />
-          <Content type={match.params.subhome} />
-        </Main_>
-      )} />
-      <Route path='/ventas/Clientes' render={({match}) => (
-        <Main_>
-          <Header type={['ventas', '>', 'Clientes']} />
-          <ContentSales />
-        </Main_>
-      )} />
+      <Route exact path='/' component={Home} />
+      <Route path='/ventas/Clientes' component={Clients} />
+      <Route path='/:subhome' component={Subhome} />
     </Switch>
   )
 }

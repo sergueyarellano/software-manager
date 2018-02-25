@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import createClientRow from './styled/ClientRow_'
+import createClientRow from './style'
 
-export default React => ({ client }) => {
+export default React => ({ client, onClick }) => {
   const ClientRow_ = createClientRow(styled)
   return (
     <Link to={`/ventas/Clientes/ficha?client=${client.code}`} >
-      <ClientRow_>
+      <ClientRow_ onClick={onClick}>
         <div>{client.code}</div>
         <div>{client.name}</div>
         <div>{client.address}</div>

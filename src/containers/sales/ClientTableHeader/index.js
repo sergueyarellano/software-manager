@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import createClientTableHeader from './styled/ClientTableHeader_'
+import createClientTableHeader from './style'
 
 const headerItems = [
   'Código',

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import createClientTableList from './styled/ClientTableList_'
-import createClientRow from './ClientRow'
+import createClientTableList from './style'
+import createClientRow from '../ClientRow'
 
 export default React => ({clients}) => {
   const ClientList_ = createClientTableList(styled)

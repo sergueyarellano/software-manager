@@ -1,8 +1,8 @@
 import { connect } from 'react-redux'
 import styled from 'styled-components'
 import createClientsTable from './style'
-import createClientTableHeader from '../../../components/ClientTableHeader'
-import createClientList from '../../../components/ClientList'
+import createClientTableHeader from '../ClientTableHeader'
+import createClientList from '../ClientList'
 import mapStateToProps from './mapState/clientList'
 
 export default React => ({type}) => {

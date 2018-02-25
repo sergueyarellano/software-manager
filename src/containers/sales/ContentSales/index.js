@@ -4,6 +4,7 @@ import createContent from './style'
 import createSeparator from '../../styled/Separator_'
 import createFilterClients from '../FilterClients'
 import createClientsTable from '../ClientsTable'
+import qs from 'query-string'
 
 export default React => ({type}) => {
   const Content_ = createContent(styled)
@@ -19,11 +20,14 @@ export default React => ({type}) => {
     </Content_>
   )
 
-  const Prueba = () => (
-    <Content_>
-      <div>heeeeo</div>
-    </Content_>
-  )
+  const Prueba = ({match, location}) => {
+    console.log(match, qs.parse(location.search))
+    return (
+      <Content_>
+        <div>heeeeo</div>
+      </Content_>
+    )
+  }
 
   return (
     <Switch>
