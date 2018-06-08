@@ -11,7 +11,7 @@ function fetchAPI (url) {
 }
 
 function * fetchClient ({pattern}) {
-  yield delay(150)
+  yield delay(170)
   try {
     if (pattern) {
       if (pattern === '*') pattern = '.*'

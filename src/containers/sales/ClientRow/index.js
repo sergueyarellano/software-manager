@@ -6,7 +6,7 @@ export default React => ({ client, onClick }) => {
   const ClientRow_ = createClientRow(styled)
   return (
     <Link to={`/ventas/Clientes/ficha?client=${client.code}`} >
-      <ClientRow_ onClick={onClick}>
+      <ClientRow_ onClick={(e) => onClick(client.code)}>
         <div>{client.code}</div>
         <div>{client.name}</div>
         <div>{client.address}</div>

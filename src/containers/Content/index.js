@@ -1,3 +1,4 @@
+import { Route, Switch } from 'react-router-dom'
 import styled from 'styled-components'
 import createContent from './style'
 import createSubhomeItems from '../styled/SubhomeItems_'
@@ -43,6 +44,13 @@ export default React => ({type}) => {
   const Content_ = createContent(styled)
   const SubhomeItems_ = createSubhomeItems(styled)
   const Separator_ = createSeparator(styled)
+
+  const TodaySales = () => (
+    <div>
+      Ventas para hoy, listado de facturas, rutas
+    </div>
+  )
+
   return (
     <Content_>
       <SubhomeItems_>
@@ -56,7 +64,7 @@ export default React => ({type}) => {
         })}
       </SubhomeItems_>
       <Separator_ />
-      <div style={{background: 'white'}}>Content here!</div>
+      <Route path='/ventas' component={TodaySales} />
     </Content_>
   )
 }

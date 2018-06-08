@@ -12,14 +12,6 @@ export default React => ({type}) => {
   const FilterClients = createFilterClients(React)
   const ClientsTable = createClientsTable(React)
 
-  const Clients = () => (
-    <Content_>
-      <FilterClients />
-      <Separator_ />
-      <ClientsTable />
-    </Content_>
-  )
-
   const Prueba = ({match, location}) => {
     console.log(match, qs.parse(location.search))
     return (
@@ -30,9 +22,13 @@ export default React => ({type}) => {
   }
 
   return (
-    <Switch>
-      <Route path='/ventas/Clientes/ficha' component={Prueba} />
-      <Route path='/ventas/Clientes' component={Clients} />
-    </Switch>
+    <Content_>
+      <FilterClients />
+      <Separator_ />
+      <Switch>
+        <Route path='/ventas/Clientes/ficha' component={Prueba} />
+        <Route path='/ventas/Clientes' component={ClientsTable} />
+      </Switch>
+    </Content_>
   )
 }
